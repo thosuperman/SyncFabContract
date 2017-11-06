@@ -11,14 +11,19 @@ const IndustryCrowdsale = artifacts.require("./IndustryCrowdsale.sol");
 contract("IndustryCrowdsale", function([owner, investor, wallet, purchaser]) {
 
   beforeEach(async function () {
-    this.token = await MFGToken.new();
-    this.crowdsale = await IndustryCrowdsale.new(this.token.address);
+    token = await MFGToken.new();
+    crowdsale = await IndustryCrowdsale.new(token.address);
   })
 
   it("should have the same owner as its token's owner", async function () {
-    let tokenOwner = await this.token.owner()
-    let crowdsaleOwner = await this.crowdsale.owner()
-    tokenOwner.should.equal(crowdsaleOwner)
+    let tokenOwner = await token.owner();
+    let crowdsaleOwner = await crowdsale.owner();
+    tokenOwner.should.equal(crowdsaleOwner);
   })
 
+  describe("transfering tokens", function() {
+    it.skip("should transfer from the owner's account", async function() {
+      this.crowdsale
+    });
+  });
 });

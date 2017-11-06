@@ -11,7 +11,7 @@ contract MFGToken is StandardToken, Ownable {
 
   uint256 public constant INITIAL_SUPPLY = (10 ** 9) * (10 ** uint256(decimals));
 
-  function MFGToken() {
+  function MFGToken() public {
     totalSupply = INITIAL_SUPPLY;
     balances[msg.sender] = INITIAL_SUPPLY;
   }

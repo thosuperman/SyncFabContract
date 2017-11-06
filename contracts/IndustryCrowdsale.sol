@@ -4,7 +4,7 @@ import 'zeppelin-solidity/contracts/math/SafeMath.sol';
 
 import './MFGToken.sol';
 
-contract IndustryCrowdsale {
+contract IndustryCrowdsale is Ownable {
   MFGToken public token;
 
   function IndustryCrowdsale(address tokenAddress) {

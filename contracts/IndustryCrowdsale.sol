@@ -48,7 +48,6 @@ contract IndustryCrowdsale is Ownable {
 
   function transfer(address _to, uint256 _value) internal returns (bool) {
     token.transferFrom(owner, _to, _value);
-    // token.transferFrom(owner, _to, _value);
   }
 
   // fallback function can be used to buy tokens

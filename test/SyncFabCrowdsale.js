@@ -16,7 +16,7 @@ const SyncFabCrowdsale = artifacts.require("./SyncFabCrowdsale.sol");
 
 contract("SyncFabCrowdsale", function([owner, investor, wallet, purchaser]) {
 
-  const rate = new BigNumber(1815)
+  const rate = new BigNumber(1250)
   const value = ether(1)
 
   const allowance = rate.mul(value)

@@ -12,9 +12,9 @@ const should = require('chai')
   .should()
 
 const MFGToken = artifacts.require("./MFGToken.sol");
-const IndustryCrowdsale = artifacts.require("./IndustryCrowdsale.sol");
+const SyncFabCrowdsale = artifacts.require("./SyncFabCrowdsale.sol");
 
-contract("IndustryCrowdsale", function([owner, investor, wallet, purchaser]) {
+contract("SyncFabCrowdsale", function([owner, investor, wallet, purchaser]) {
 
   const rate = new BigNumber(1815)
   const value = ether(1)
@@ -33,7 +33,7 @@ contract("IndustryCrowdsale", function([owner, investor, wallet, purchaser]) {
     this.afterEndTime = await this.endTime + duration.seconds(1)
 
     this.token = await MFGToken.new();
-    this.crowdsale = await IndustryCrowdsale.new(this.token.address, this.startTime, this.endTime, rate, wallet);
+    this.crowdsale = await SyncFabCrowdsale.new(this.token.address, this.startTime, this.endTime, rate, wallet);
   })
 
   it("should have the same owner as its token's owner", async function () {

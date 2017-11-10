@@ -4,7 +4,7 @@ import 'zeppelin-solidity/contracts/math/SafeMath.sol';
 
 import './MFGToken.sol';
 
-contract IndustryCrowdsale is Ownable {
+contract SyncFabCrowdsale is Ownable {
   using SafeMath for uint256;
 
   MFGToken public token;
@@ -29,7 +29,7 @@ contract IndustryCrowdsale is Ownable {
    */
   event TokenPurchase(address indexed purchaser, address indexed beneficiary, uint256 value, uint256 amount);
 
-  function IndustryCrowdsale(address tokenAddress, uint256 _startTime, uint256 _endTime, uint256 _rate, address _wallet)
+  function SyncFabCrowdsale(address tokenAddress, uint256 _startTime, uint256 _endTime, uint256 _rate, address _wallet)
     public
   {
     require(_startTime >= now);

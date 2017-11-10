@@ -1,5 +1,6 @@
 User Accepttance Tests for the contracts that we use to conduct our crowdsales
 
+```
   Contract: MFGToken
     #MFGToken()
       ✓ should return the correct totalSupply after construction
@@ -36,3 +37,4 @@ User Accepttance Tests for the contracts that we use to conduct our crowdsales
       ✓ should forward funds to wallet (219ms)
  
   22 passing (7s)
+```
